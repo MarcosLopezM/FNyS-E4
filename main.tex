@@ -167,6 +167,11 @@
     unicode=true%
 }
 
+%%%%%%%%%%%%%%%%%%Enumitem configuration%%%%%%%%%%%%%%%%%%
+\setlist[enumerate, 1] {
+  label = (\alph*),
+}
+
 %%%%%%%%%%%%%%%%%%siunitx configuration%%%%%%%%%%%%%%%%%%
 % Configuración del paquete siunitx
 \sisetup{
@@ -337,13 +342,4 @@ after = \end{multicols}}
     
     % Problema 4
     \subfileinclude{exercises/exercise4.tex}
-
-    % Problema 5
-    \subfileinclude{exercises/exercise5.tex}
-
-    % Problema 6
-    \subfileinclude{exercises/exercise6.tex}
-    
-    % Problema 7
-    \subfileinclude{exercises/exercise7.tex}
 \end{document}
