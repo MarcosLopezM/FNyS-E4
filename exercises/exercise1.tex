@@ -7,23 +7,25 @@
 
         Cuando el electrón se encuentra afuera de este núcleo finito, el potencial que siente es exactamente el mismo que el que sentiría si el núcleo fuera una carga puntual. Sin embargo, dentro de la región del protón, el potencial electrostático es diferente. Podemos encontrar el corrimiento en los niveles de energía debidos a este efecto usando teoría de perturbaciones.
 
-        En este problema, vamos a considerar que la carga eléctrica del protón está uniformemente distribuida en una esfera de radio \(\rho\). Por llo que el potencial electrostático que el protón genera en todo el espacio es:
+        En este problema, vamos a considerar que la carga eléctrica del protón está uniformemente distribuida en una esfera de radio \(\rho\). Por lo que el potencial electrostático que el protón genera en todo el espacio es:
 
-        \begin{equation*}
+        \begin{equation}
             V(r) = 
             \begin{cases*}
                 \tfrac{-3\e^{2}}{8\pi\epsilon_{0}\rho}\left(1 - \tfrac{r^{2}}{3\rho^{2}}\right), & si \(0 \leq r \leq \rho\)\\
                 -\tfrac{\e^{2}}{4\pi\epsilon_{0}r}, & si \(r > \rho\)
             \end{cases*}
-        \end{equation*}
+            \label{eq:electrostaticPotential}
+        \end{equation}
 
         \begin{enumerate}
             \item Valor: 0.5pt - Realiza una gráfica del potencial \(V(r)\), ¿cómo cambia esta gráfica al cambiar el valor de \(\rho\)?
             \item Valor: 0.5pt - Considerando que el potencial imperturbado es el potencial de Coulomb usual,
             
-            \begin{equation*}
+            \begin{equation}
                 V_{0}(r) = -\dfrac{\e^{2}}{4\pi\epsilon_{0}r},
-            \end{equation*}
+                \label{eq:unperturbedPotential}
+            \end{equation}
 
             demuestra que la perturbación debida al efecto finito del protón es
 
