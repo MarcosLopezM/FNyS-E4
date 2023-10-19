@@ -2,34 +2,13 @@
 \graphicspath{{img/}}
 
 \begin{document}
-    \begin{exercise}[Átomo de hidrógeno en un estado mezclado]
-        El electrón de un átomo de hidrógeno se encuentra en el siguiente estado de posición y spin:
+    \begin{exercise}[Igualdad con operadores de spin (2 pt)]
+        En clase se utilizó, sin demostrar, la siguiente expresión para una partícula con número cuántico de spin \(s = \tfrac{1}{2}\),
 
         \begin{equation*}
-            \psi(r, \theta, \phi) = R_{2,1}(r) \left(\sqrt{\tfrac{1}{3}}Y_{1,0}(\theta, \phi)\chi_{+} + \sqrt{\tfrac{2}{3}}Y_{1,1}(\theta, \phi)\chi_{-}\right),
+            \op{S}{}{2} - 3\dfrac{\left(\op{\vec{S}} \cdot \vec{r}\right)^{2}}{r^{2}} = 0.
         \end{equation*}
 
-        en donde las funciones \(\chi_{+}\) y \(\chi_{-}\) corresponden a las funciones de spin del electrón \(\ket{+} \equiv \ket{s = 1/2, m_{s} = 1/2}\) y \(\ket{-} \equiv \ket{s = 1/2, m_{s} = -1/2}\), respectivamente.
-
-        \begin{enumerate}
-            \item Valor: 0.5pt - Si se realiza una medida del momento angular orbital total de \(\observable{L}[][2]\), ¿cuáles son los posibles resultados y cuál es la probabilidad de obtener cada uno de ellos?
-            \item Valor: 0.5pt - Misma pregunta para la componente-\(z\) del momento angular orbital \(\observable{L}[z]\).
-            \item Valor: 0.5pt - Misma pregunta para la componente-\(z\) del momento angular de spin total \(\observable{S}[][2]\).
-            \item Valor: 0.5pt - Misma pregunta para la componente-\(z\) del operador de spin, \(\observable{S}[z]\).
-            \item Valor: 0.5pt - Si se mide la posición de la partícula, ¿cuál es la \textbf{densidad de probabilidad} de encontrarla en la posición \((r, \theta, \phi)\)?
-            \item Valor: 0.5pt - Ahora se miden tanto la componente-\(z\) del spin como la distancia \(r\) al origen. Nota que estas cantidades físicas pueden medirse simultáneamente. Demuestra que la \textbf{densidad de probabilidad} de encontrar a la partícula en el estado de spin \(\chi_{+}\) a una distancia \(r\) del origen está dada por
-            
-            \begin{equation*}
-                \tfrac{1}{72a_{0}^{5}}r^{2}\e^{-r/a_{0}},
-            \end{equation*}
-
-            en donde \(a_{0}\) es el radio de Bohr.
-
-            \color{blue}
-            \item Extra: Valor +0.5pt - Sea \(\observable{\vect{J}} = \observable{\vect{L}} + \observable{\vect{S}}\) el momento angular total del sistema. Si se mide \(\observable{J}[][2]\), ¿cuáles son los posibles resultados y cuál es la probabilidad de obtener cada uno de ellos?
-            \item Extra: Valor +0.5pt - Misma pregunta para \(\observable{J}[z]\).
-            
-            \textbf{Sugerencia}: Para resolver los incisos (g) y (h) puedes usar (sin demostrar) los resultados que encontraste en la Tarea 1 para la suma de momentos angulares \(j_{1} = 1\) y \(j_{2} = 1/2\). 
-        \end{enumerate}
+        Demuéstrala.
     \end{exercise}
 \end{document}

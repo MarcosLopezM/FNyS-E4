@@ -2,53 +2,48 @@
 \graphicspath{{img/}}
 
 \begin{document}
-    \begin{exercise}[Tamaño finito del protón]
-        En clase calculamos los niveles de energía del átomo de hidrógeno suponiendo que el protón es una partícula puntual. Esta aproximación es buena porque el tamaño del protón es cinco órdenes de magnitud menor que la extensión característica de la función de onda del electrón. Sin embargo, en realidad el protón tiene un tamaño finito y los niveles de energía sufrirán un pequeño corrimiento debido a esto.
+    \begin{exercise}[Estructura hiperfina]
+        Primero, explica el origen físico de la estructura hiperfina. Explica por qué se espera que el efecto de la estructura hiperfina sea del orden de \(\tfrac{m}{M_{p}}\) menor que el de la estructura fina. Aquí \(m\) es la masa del electrón y \(M_{p}\) la del protón.
+        
+        Ahora, recuerda que en clase se demostró que la corrección de primer orden de la energía debida a la estructura hiperfina está dada por
 
-        Cuando el electrón se encuentra afuera de este núcleo finito, el potencial que siente es exactamente el mismo que el que sentiría si el núcleo fuera una carga puntual. Sin embargo, dentro de la región del protón, el potencial electrostático es diferente. Podemos encontrar el corrimiento en los niveles de energía debidos a este efecto usando teoría de perturbaciones.
+        \begin{equation*}
+            \change{E} = \tfrac{C}{2}\left[F(F + 1) - I(I + 1) - j(j + 1)\right]
+        \end{equation*}
 
-        En este problema, vamos a considerar que la carga eléctrica del protón está uniformemente distribuida en una esfera de radio \(\rho\). Por lo que el potencial electrostático que el protón genera en todo el espacio es:
+        en donde
 
-        \begin{equation}
-            V(r) = 
-            \begin{cases*}
-                \tfrac{-3\e^{2}}{8\pi\epsilon_{0}\rho}\left(1 - \tfrac{r^{2}}{3\rho^{2}}\right), & si \(0 \leq r \leq \rho\)\\
-                -\tfrac{\e^{2}}{4\pi\epsilon_{0}r}, & si \(r > \rho\)
-            \end{cases*}
-            \label{eq:electrostaticPotential}
-        \end{equation}
+        \begin{equation*}
+            C = \dfrac{\mu_{0}}{4\pi}g_{I}\mu_{B}\mu_{N}\dfrac{1}{j(j + 1)(2\ell + 1)}\left(\dfrac{Z}{a_{\mu}n}\right)^{3}.
+        \end{equation*}
 
         \begin{enumerate}
-            \item Valor: 0.5pt - Realiza una gráfica del potencial \(V(r)\), ¿cómo cambia esta gráfica al cambiar el valor de \(\rho\)?
-            \item Valor: 0.5pt - Considerando que el potencial imperturbado es el potencial de Coulomb usual,
+            \item (Valor: 1pt) - Utilizando este resultado demuestra que en un \textbf{mismo} multiplete hiperfino, la separación entre dos niveles hiperfinos \textbf{subsecuentes} está dada por
             
-            \begin{equation}
-                V_{0}(r) = -\dfrac{\e^{2}}{4\pi\epsilon_{0}r},
-                \label{eq:unperturbedPotential}
-            \end{equation}
-
-            demuestra que la perturbación debida al efecto finito del protón es
-
             \begin{equation*}
-                W(r) = 
-                \begin{cases*}
-                    -\tfrac{3\e^{2}}{8\pi\epsilon_{0}\rho}, & si \(0 \leq r \leq \rho\)\\
-                    0, & si \(r > \rho\)
-                \end{cases*}
+                \change{E}(F) - \change{E}(F - 1) = CF.
             \end{equation*}
 
-            \item Valor: 2pt - Usando teoría de perturbaciones de primer orden (caso \textbf{no} degenerado) y considerando únicamente el átomo de Bohr (es decir, ignorando estructura fina e hiperfina), obtén los corrimientos de energía para los estados \(1s\), \(2s\) y \(2p\). Compara tus resultados y explica las diferencias.
+            Notemos que esta separación, conocida como \emph{separación hiperfina}, es proporcional a \(F\). Esta propiedad es un ejemplo de los que se conoce como \emph{regla del intervalo}.
+
+            \item (Valor: 1pt) - En un \textbf{mismo} multiplete hiperfino, las componentes hiperfinas más separadas tienen como valores del número cuántico a \(F\) a \(F_{\text{máx}} = I + j\) y \(F_{\text{mín}} = \abs{I - j}\). Demuestre que la separación entre estos dos niveles hiperfinos está dada por
             
-            \textbf{Sugerencia:} Como el radio del protón \(\rho\) es mucho menor que el radio de Bohr \(a_{0}\), puedes aproximar \(\abs{\psi_{nlm}(r)}^{2} \simeq \abs{\psi_{nlm}(0)}\), cuando \(0 \leq r \leq \rho\).
+            \begin{equation*}
+                \fdif{E} \equiv \adif{E}(F_{\text{máx}}) - \adif{E}(F_{\text{mín}}) = 2C \mul \begin{dcases*}
+                    j(I + \tfrac{1}{2}) & si \(j \leq I\)\\
+                    I(j + \tfrac{1}{2}) & si \(j \geq I\)
+                \end{dcases*} 
+            \end{equation*}
             
-            \item Valor 0.5pt - El radio del protón es de aproximadamente \qty{0.88}{\fm} (\qty{0.88e-15}{\m}). Calcula el valor numérico del corrimiento en la energía (en unidades de frecuencia) debida al tamaño finito del protón en el estado \(2s\) del átomo de hidrógeno. Compara la energía del estado perturbado cno la del estado imperturbado.
+            \item (Valor: 1pt) - Considera ahora el caso del átomo de hidrógeno, es decir, el caso en el que el núcleo que interactúa con el electrón está compuesto apenas por un protón. El número cuántico de spin del protón es \(I = \tfrac{1}{2}\). En este caso, el estado fundamental del sistema, el nivel \(1s_{1/2}\) se divide en dos estados hiperfinos con \(F = 0\) y \(F = 1\). Demuestra que la separación entre estos dos estados hiperfinos es
             
-            \item Valor 0.5pt - Ahora repite el cálculo del inciso anterior para el estado \(2s\) del átomo de hidrógeno \textbf{muónico} (es decir, el átomo de hidrógeno en donde el electrón es sustituido por un muón). La masa del muón es 208 veces mayor que la del electrón. Compara estos resultados con los del inciso anterior. ¿Piensas que el radio del protón podría medirse al estudiar los corrimientos de energía en este átomo? Justifica tu respuesta.
-            
-            \textbf{Comentario:} Si tienes curiosidad sobre esta última parte, revisa el artículo ``The size of the proton'', R. Pohl et al., Nature \textbf{466}, 213-216 (2010). Si no tienes acceso al artículo pídeselo al profesor.
-            
-            \color{blue}
-            \item Extra - Valor: +1.0pt: Explica porqué podemos usar teoría de perturbaciones en este problema. Explica también porqué en el inciso (c) podemos usar el caso no degenerado de este método.
+            \begin{equation*}
+                \fdif{E} = \dfrac{\mu_{0}}{4\pi}\dfrac{16g_{I}\mu_{B}\mu_{N}}{3a_{0}^{3}}.
+            \end{equation*}
+
+        \item (Valor: 0.5pt) - Calcula la diferencia de energía (en unidades de \unit{\eV}) del desdoblamiento hiperfino del estado fundamental del átomo de hidrógeno (para el protón \(g_{I} \simeq \num{5.588}\)), ¿cuál es la frecuencia \(\nu\) (en \unit{\MHz}) y la longitud de onda \(\lambda\) (en \unit{\cm}) de la transición entre estos niveles?
+        
+        \item (Valor: 0.5pt) - El núcleo del átomo de deuterio está compuesto por un protón y un neutrón. Para este núcleo \(I = 1\) y \(g_{I} \simeq \num{0.857}\). Calcula el cociente entre los desdoblamientos hiperfinos del estado fundamental de los átomos de hidrógeno y deuterio.
         \end{enumerate}
     \end{exercise}
 \end{document}

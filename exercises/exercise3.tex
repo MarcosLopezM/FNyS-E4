@@ -2,25 +2,23 @@
 \graphicspath{{img/}}
 
 \begin{document}
-    \begin{exercise}[Estructura fina: el término de Darwin (valor total: 3pt)]
-        Considera el átomo de un electrón. En clase se mostró que una de las correcciones relativistas está asociada a la incertidumbre en la posición del electrón. El término que describe esta corrección, conocido como término de Darwin, está dado por
+    \begin{exercise}[Efecto Stark]
+        Cuando un átomo se encuentra en presencia de un campo eléctrico constante \(\vect{E}_{s}\) los niveles de energía se desplazan, un fenómeno conocido como ``\textbf{Efecto Stark}''. En este problema analizamos únicamente el efecto Stark en los estados \(n = 1\) y \(n = 2\) del átomo de hidrógeno. Supongamos que el campo eléctrico apunta en la dirección \(z\), de manera que la energía potencial del electrón es
 
         \begin{equation*}
-            \observable{H}[3] = \dfrac{\pi\hbar^{2}}{2m^{2}c^{2}}\dfrac{Z\e^{2}}{4\pi\epsilon_{0}}\delta(r).
+            \op{W}{S} = -\e E_{s}z = \e E_{s}\cos\theta.
         \end{equation*}
 
-        Utilizando teoría de perturbaciones independientes del tiempo demuestra que, a primer orden, la corrección de la energía debida al término de Darwin es
+        Considera que \(\op{W}{S}\) es una perturbación sobre el átomo de hidrógeno de Bohr (es decir, no es necesario que consideres la estructura fina e hiperfina). También puedes ignorar al spin del electrón en este problema.
 
-        \begin{equation*}
-            \change{E_{3}} =
-            \begin{cases*}
-                0 & si \(\ell \neq 0\)\\
-                -E_{n}\tfrac{Z^{2}\alpha^{2}}{n} & si \(\ell = 0\)
-            \end{cases*}
-        \end{equation*}
-
-        en donde \(E_{n} = -\mu c^{2}\alpha^{2}Z^{2}/(2n^{2})\) son las energías imperturbadas del sistema.
-
-        \textbf{Sugerencia:} A pesar de que el átomo de un electrón es un sistema degenerado, este problema puede resolverse usando el caso no degenerado de la teoría de perturbaciones independientes del tiempo, ¿por qué? ¿cómo podrías demostrarlo?
+        \begin{enumerate}
+            \item (Valor: 1pt) - Demuestra que, a primer orden, esta perturbación no altera al estado fundamental.
+            \item (Valor: 3pt) - El primer estado excitado presenta degeneración cuádruple: \(\psi_{200}\), \(\psi_{211}\), \(\psi_{210}\) y \(\psi_{21-1}\). Usando teoría de perturbaciones para el caso degenerado, determina la corrección de la energía a primer orden. ¿En cuántos niveles se desdobla la energía \(E_{2}\)?
+            
+            \color{blue}
+            \item Inciso extra (+2.5pt) - ¿Cuál es la mejor base para realizar el cálculo del inciso (b)? Encuentra el valor esperado del operador de momento dipolar eléctrico (\(\vect{P} = -\e\vect{r}\)) para cada uno de los miembros de dicha base que son pertinentes para este problema.
+            
+            \textbf{Pista}: La ``mejor base'' es justamente aquella que diagonaliza a la matriz \(\op{W}{S}\).
+        \end{enumerate}
     \end{exercise}
 \end{document}
