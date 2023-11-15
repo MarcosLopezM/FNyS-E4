@@ -2,11 +2,11 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
 \setotherlanguage{english}
+\gappto\captionsspanish{\def\tablename{Tabla}}
 \usepackage{fontspec}
 \usepackage{savesym} % Renames commands for conflicted packages
 \usepackage[export]{adjustbox}
 \usepackage{amsfonts, amsmath, amssymb}
-\usepackage{annotate-equations}
 \usepackage{bm}
 \usepackage{bookmark}
 \usepackage{chemformula}
@@ -29,25 +29,27 @@
 \savesymbol{tr}
 \savesymbol{rank}
 \usepackage{multicol}
-\usepackage{nicefrac}
+\usepackage{nicematrix}
 \usepackage[hyperref]{ntheorem}
 \usepackage{phfqit} % Bra-ket notation
 \savesymbol{so}
-\usepackage{regexpatch}
-\usepackage[nolabel]{showlabels}
+% \usepackage{regexpatch}
 \usepackage{simples-matrices}
 \usepackage{siunitx}
 \usepackage{soul}
 \usepackage{spbmark}
+\usepackage{standalone}
 \usepackage{subfiles}
 \usepackage{titling}
 \usepackage{tabularray}
 \usepackage{tasks}
-\usepackage{tensor}
-% \usepackage[compat=1.1.0]{tikz-feynman}
 \usepackage{xcolor}
 \usepackage{xparse}
 \usepackage{xspace}
+\usepackage[
+    style = reading,
+    sorting = none,
+]{biblatex}
 \usepackage{hyperref}
 \usepackage{cleveref}
 
@@ -63,7 +65,7 @@
 \setlength{\parskip}{0.5em} % Espacio entre párrafo
 \linespread{1.1} % line spacing
 \setlength{\jot}{10pt} % Space between lines in multiline eqs
-% \crefname{equation}{ec.}{ecs.} % Equation's cross-reference name
+\crefname{table}{Tabla}{} % Table's cross-reference name
 \crefname{equation}{}{} % Equation's cross-reference name
 
 % Line-breaker config
@@ -98,8 +100,8 @@
   {\item{\theorem@headerfont
           ##1\ ##2:\ ##3\theorem@separator}\hskip\labelsep\relax\nobreakitem}
 % make \th@nonumberbreak the same as \th@break, but remove "\ ##2"
-\let\th@nonumberbreak\th@break
-\xpatchcmd*{\th@nonumberbreak}{\ ##2}{}{}{}
+% \let\th@nonumberbreak\th@break
+% \xpatchcmd*{\th@nonumberbreak}{\ ##2}{}{}{}
 \makeatother
 
 \theoremstyle{break}
@@ -295,7 +297,7 @@ after = \end{multicols}}
 \MakeAboxedCommand\Aboxedmain\mainresult
 \newcommand*\widefbox[1]{\fboxsep=3.5pt\fboxrule=1.2pt\fbox{#1}}
 
-\newcommand\secondaryresult[1]{\color{custom}\fboxsep=3.5pt\fbox{\color{black}#1}}
+\newcommand\secondaryresult[1]{\color{customBlue}\fboxsep=3.5pt\fbox{\color{black}#1}}
 \MakeAboxedCommand\Aboxedsec\secondaryresult
 
 %%%%%%%%%%%%%%%%%%Portada y configuración%%%%%%%%%%%%%%%%%%
