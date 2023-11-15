@@ -2,127 +2,22 @@
 \graphicspath{{img/}}
 
 \begin{document}
-    \begin{exercise}[Estructura hiperfina]
-        Primero, explica el origen físico de la estructura hiperfina. Explica por qué se espera que el efecto de la estructura hiperfina sea del orden de \(\tfrac{m}{M_{p}}\) menor que el de la estructura fina. Aquí \(m\) es la masa del electrón y \(M_{p}\) la del protón.
-        
-        Ahora, recuerda que en clase se demostró que la corrección de primer orden de la energía debida a la estructura hiperfina está dada por
+    \begin{exercise}[Primeros estados excitados del átomo de helio]
+        Calcula la energía, a primer orden de aproximación, de los estados excitados del átomo de helio \(2^{1}S\), \(2^{1}P\), \(2^{3}S\) y \(2^{3}P\). Para hacer este cálculo será necesario obtener explícitamente las integrales de COulomb y de intercambio, \(J_{n\ell}\) y \(K_{n\ell}\) respectivamente. Recuerda que en clase vimos que las energías corregidas están dadas por la expresión
 
         \begin{equation*}
-            \change{E} = \tfrac{C}{2}\left[F(F + 1) - I(I + 1) - j(j + 1)\right]
+            E_{n\ell,\pm} = E_{1n}^{(0)} + E_{n\ell,\pm}^{(1)} = -\dfrac{Z^{2}}{2}\left(1 + \dfrac{1}{n^{2}}\right) + J_{n\ell} \pm K_{n\ell}.
         \end{equation*}
 
-        en donde
+        Los niveles de energía quedaban como se ilustra en la siguiente figura:
 
-        \begin{equation*}
-            C = \dfrac{\mu_{0}}{4\pi}4g_{I}\mu_{B}\mu_{N}\dfrac{1}{j(j + 1)(2\ell + 1)}\left(\dfrac{Z}{a_{\mu}n}\right)^{3}.
-        \end{equation*}
+        \begin{figure}[htb]
+            \centering
+            \includegraphics{first-excited-states}
+            \caption{Primeros estados excitados del átomo de dos electrones.}
+            \label{fig:first-excites-states-helium}
+        \end{figure}
 
-        \begin{enumerate}
-            \item (Valor: 1pt) - Utilizando este resultado demuestra que en un \textbf{mismo} multiplete hiperfino, la separación entre dos niveles hiperfinos \textbf{subsecuentes} está dada por
-            
-            \begin{equation*}
-                \change{E}(F) - \change{E}(F - 1) = CF.
-            \end{equation*}
-
-            Notemos que esta separación, conocida como \emph{separación hiperfina}, es proporcional a \(F\). Esta propiedad es un ejemplo de los que se conoce como \emph{regla del intervalo}.
-
-            \begin{solution}
-                En estructura fina considerábamos al núcleo como algo puntual que generaba un campo de Coulomb electrostático. Sin embargo, hay más desdoblamientos adicionales en la estructura de niveles de Dirac mucho menores a la estructura fina. Es decir, el núcleo ya no es una partícula puntual, sino una distribución de carga.
-
-                ¿Pero por qué el efecto de la estructura hiperfina es menor al de la estructura fina? Esto se debe a que en la estructura hiperfina se introduce el magnetón magnético \(\mu_{N}\), el cual está dado como:
-
-                \begin{equation*}
-                    \mu_{N} = \dfrac{m}{M_{p}}\mu_{B}.
-                \end{equation*}
-
-                Por lo tanto, el efecto de la estructura hiperfina es del orden de \(\tfrac{m}{M_{p}}\) menor que el de la estructura fina, ya que \(\mu_{N} \ll \mu_{B}\) debido a que la masa del protón es 2000 veces mayor a la del electrón.
-
-                Queremos demostrar que
-
-                \begin{equation*}
-                    \Delta E (F) - \Delta E (F - 1) = CF.
-                \end{equation*}
-
-                Entonces,
-
-                \begin{align*}
-                    \Delta E(F) - \Delta E(F - 1) &= \dfrac{C}{2}\left[F(F + 1) - I(I + 1) - j(j + 1) - (F - 1)(F - 1 + 1) + I(I + 1) + j(j + 1)\right],\\
-                    &= \dfrac{C}{2}\left[F(F + 1 - F + 1)\right],\\
-                    \Aboxedmain{\Delta E(F) - \Delta E(F - 1) &= CF.}
-                \end{align*}
-            \end{solution}
-
-            \item (Valor: 1pt) - En un \textbf{mismo} multiplete hiperfino, las componentes hiperfinas más separadas tienen como valores del número cuántico a \(F\) a \(F_{\text{máx}} = I + j\) y \(F_{\text{mín}} = \abs{I - j}\). Demuestre que la separación entre estos dos niveles hiperfinos está dada por
-            
-            \begin{equation*}
-                \fdif{E} \equiv \adif{E}(F_{\text{máx}}) - \adif{E}(F_{\text{mín}}) = 2C \mul \begin{dcases*}
-                    j(I + \tfrac{1}{2}) & si \(j \leq I\)\\
-                    I(j + \tfrac{1}{2}) & si \(j \geq I\)
-                \end{dcases*} 
-            \end{equation*}
-
-            \begin{solution}
-                Por un lado, para \(j \leq I\),
-
-                \begin{align*}
-                    \delta E &= \Delta E(F_{max}) - \Delta E(F_{min}),\\
-                    &= \tfrac{C}{2}\left\lbrace\left[(I + j)(I + j + 1) - I(I + 1) - j(j + 1)\right] - \left[(I - j)(I - j + 1) - I(I + 1) - j(j +1)\right]\right\rbrace,\\
-                    &= \tfrac{C}{2}\left\lbrace4Ij + 2j\right\rbrace,\\
-                    \Aboxedsec{\delta E &= 2Cj(I + \tfrac{1}{2}). \quad j\leq I}
-                \end{align*}
-
-                Por el otro, para \(j \geq I \implies I - j \leq 0\). Así,
-
-                \begin{align*}
-                    \delta E &= \tfrac{C}{2}\left\lbrace\left[(I + j)(I + j + 1) - I(I + 1) - j(j + 1)\right] - \left[-(I - j)(j - I + 1) - I(I + 1) - j(j + 1)\right]\right\rbrace,\\
-                    &= \tfrac{C}{2}\left\lbrace(I + j)(I + j +1) + (I - j)(j - I + 1)\right\rbrace,\\
-                    &= \tfrac{C}{2}\left\lbrace4Ij + 2I\right\rbrace,\\
-                    \Aboxedsec{\delta E &= 2CI(j + \tfrac{1}{2}). \quad j \geq I}
-                \end{align*}
-
-                \pagebreak
-                Por lo tanto,
-
-                \begin{empheq}[box = \color{pinkwave}\fbox]{equation*}
-                    \fdif{E} = 2C \mul \begin{dcases*}
-                        j(I + \tfrac{1}{2}) & si \(j \leq I\)\\
-                        I(j + \tfrac{1}{2}) & si \(j \geq I\)
-                    \end{dcases*}
-                \end{empheq}
-            \end{solution}
-            
-            \item (Valor: 1pt) - Considera ahora el caso del átomo de hidrógeno, es decir, el caso en el que el núcleo que interactúa con el electrón está compuesto apenas por un protón. El número cuántico de spin del protón es \(I = \tfrac{1}{2}\). En este caso, el estado fundamental del sistema, el nivel \(1s_{1/2}\) se divide en dos estados hiperfinos con \(F = 0\) y \(F = 1\). Demuestra que la separación entre estos dos estados hiperfinos es
-            
-            \begin{equation*}
-                \fdif{E} = \dfrac{\mu_{0}}{4\pi}\dfrac{16g_{I}\mu_{B}\mu_{N}}{3a_{0}^{3}}.
-            \end{equation*}
-
-            \begin{solution}
-                Sabemos que \(F = \tfrac{1}{2} + j, \tfrac{1}{2} - j\). Por lo que, \(j = \tfrac{1}{2}\) y usando cualquiera de los resultados obtenidos en el inciso anterior, tenemos que
-
-                \begin{align*}
-                    \fdif{E} &= 2C\left[\tfrac{1}{2}\left(\tfrac{1}{2} + \tfrac{1}{2}\right)\right],\\
-                    &= 2C\left(\tfrac{1}{2}\right),\\
-                    \Aboxedsec{\fdif{E} &= C.}
-                \end{align*}
-
-                Recordando la expresión para \(C\),
-
-                \begin{equation*}
-                    C = \dfrac{\mu_{0}}{4\pi}4g_{I}\mu_{B}\mu_{N}\dfrac{1}{j(j + 1)(2\ell + 1)}\left(\dfrac{Z}{a_{\mu}n}\right)^{3}.
-                \end{equation*}
-
-                Sustituyendo los valores correspondientes,
-
-                \begin{align*}
-                    C &= \dfrac{\mu_{0}}{4\pi}4g_{I}\mu_{B}\mu_{N}\dfrac{1}{\tfrac{1}{2}\left(\tfrac{1}{2} + 1\right)\left(2(0) + 1\right)}\left(\dfrac{1}{a_{\mu}(1)}\right)^{3},\\
-                    \Aboxedmain{C &= \dfrac{\mu_{0}}{4\pi}\dfrac{16g_{I}\mu_{B}\mu_{N}}{3a_{\mu}^{3}}.}
-                \end{align*}
-            \end{solution}
-
-            \item (Valor: 0.5pt) - Calcula la diferencia de energía (en unidades de \unit{\eV}) del desdoblamiento hiperfino del estado fundamental del átomo de hidrógeno (para el protón \(g_{I} \simeq \num{5.588}\)), ¿cuál es la frecuencia \(\nu\) (en \unit{\MHz}) y la longitud de onda \(\lambda\) (en \unit{\cm}) de la transición entre estos niveles?
-            
-            \item (Valor: 0.5pt) - El núcleo del átomo de deuterio está compuesto por un protón y un neutrón. Para este núcleo \(I = 1\) y \(g_{I} \simeq \num{0.857}\). Calcula el cociente entre los desdoblamientos hiperfinos del estado fundamental de los átomos de hidrógeno y deuterio.
-        \end{enumerate}
+        \textbf{Nota importante:} Para resolver este ejercicio puedes usar directamente las integrales que se encontraron en clase para \(J_{n\ell}\) y \(K_{n\ell}\). Sin embargo, recuerda que éstas quedaban en términos de las variables \(r_{<}\) y \(r_{>}\). Es necesario que expliques con claridad cómo es que estas dos variables se emplean en el cálculo de las integrales, de manera que encuentres una expresión en términos ya no de \(r_{<}\) y \(r_{>}\), sino de \(r_{1}\) y \(r_{2}\) (\idest la coordenada radial de cada electrón). Una vez que hayas dejado este punto claro, las integrales que quedan pueden resolver a mano, o bien, usando cualquier software para hacer la integración. Si decides usar un software, es necesario que especifiques qué programa usaste y que anexes el código al ejercicio.
     \end{exercise}
 \end{document}

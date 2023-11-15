@@ -162,7 +162,7 @@
     urlbordercolor={[rgb]{0.8,0,0.8}},%
     runbordercolor={[rgb]{0.8,0,0.8}},%
     menubordercolor={[rgb]{0,0.2,0.6}},% 
-    pdftitle={Tarea 3},%
+    pdftitle={Tarea 4},%
     pdfauthor={López Merino Marcos},%
     pdfsubject={Física Atómica y Materia Condensada},%
     pdfkeywords={Facultad de Ciencias, UNAM, Física Atómica y Materia Condensada},%
@@ -209,9 +209,9 @@
 %%%%%%%%%%%%%%%%%%Nuevos comandos%%%%%%%%%%%%%%%%%%
 \newcommand*{\group}{8287}
 \newcommand*{\classname}{Física Atómica y Materia Condensada}
-\newcommand*{\homeworknumber}{Tarea 3}
+\newcommand*{\homeworknumber}{Tarea 4}
 \newcommand*{\name}{Marcos López Merino}
-\DTMsavedate{duedate}{2023-10-31}
+\DTMsavedate{duedate}{2023-11-23}
 
 % unit vector i
 \newcommand*{\uveci}{{\bm{\hat{\textnormal{\bfseries\i}}}}}
@@ -269,6 +269,12 @@
 itemsep = 1\itemsep,
 parsep = 0.5\parsep,
 before = \raggedcolumns\begin{multicols}{2},
+after = \end{multicols}}
+
+\SetEnumitemKey{threecol}{
+itemsep = 1\itemsep,
+parsep = 0.5\parsep,
+before = \raggedcolumns\begin{multicols}{3},
 after = \end{multicols}}
 
 
@@ -338,10 +344,4 @@ after = \end{multicols}}
 
     % Problema 2
     \subfileinclude{exercises/exercise2.tex}
-
-    % Problema 3
-    \subfileinclude{exercises/exercise3.tex}
-    
-    % Problema 4
-    \subfileinclude{exercises/exercise4.tex}
 \end{document}
