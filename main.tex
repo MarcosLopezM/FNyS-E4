@@ -32,6 +32,7 @@
 \usepackage{multicol}
 \usepackage{nicematrix}
 \usepackage[hyperref]{ntheorem}
+\usepackage{pdfpages}
 \usepackage{phfqit} % Bra-ket notation
 \savesymbol{so}
 % \usepackage{regexpatch}
@@ -302,10 +303,13 @@ after = \end{multicols}}
 % Defining a variant of Aboxed command from mathtools
 \newcommand\mainresult[1]{\color{pinkwave}\fboxsep=3.5pt\fboxrule=1.2pt\fbox{\color{black}#1}}
 \MakeAboxedCommand\Aboxedmain\mainresult
-\newcommand*\widefbox[1]{\fboxsep=3.5pt\fboxrule=1.2pt\fbox{#1}}
+\newcommand*\widefbox[1]{\fboxsep=3.5pt\fboxrule=1.5pt\fbox{#1}}
 
 \newcommand\secondaryresult[1]{\color{customBlue}\fboxsep=3.5pt\fbox{\color{black}#1}}
 \MakeAboxedCommand\Aboxedsec\secondaryresult
+
+% Custom boxes
+\newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{base3}{\hspace{1em}#1\hspace{1em}}}
 
 %%%%%%%%%%%%%%%%%%Portada y configuración%%%%%%%%%%%%%%%%%%
 % Configuración de portada
