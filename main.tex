@@ -61,7 +61,7 @@
 \definecolor{base3}{RGB}{253, 246, 227}%
 \definecolor{pinkwave}{RGB}{255, 0, 128}%
 \definecolor{customBlue}{RGB}{11, 61, 98}%
-\pagecolor{base3}
+% \pagecolor{base3}
 \graphicspath{{img/}}
 \setlength{\parindent}{2em} % Sangría
 \setlength{\parskip}{0.5em} % Espacio entre párrafo
@@ -309,7 +309,10 @@ after = \end{multicols}}
 \MakeAboxedCommand\Aboxedsec\secondaryresult
 
 % Custom boxes
-\newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{base3}{\hspace{1em}#1\hspace{1em}}}
+% Main result box for reading mode
+% \newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{base3}{\hspace{1em}#1\hspace{1em}}}
+% Main result box for printing mode
+\newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{white}{\hspace{1em}#1\hspace{1em}}}
 
 %%%%%%%%%%%%%%%%%%Portada y configuración%%%%%%%%%%%%%%%%%%
 % Configuración de portada
