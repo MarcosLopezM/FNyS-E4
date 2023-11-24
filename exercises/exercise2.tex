@@ -2,141 +2,30 @@
 \graphicspath{{img/}}
 
 \begin{document}
-    \color{blue}
-    \begin{exercise}[Extra (valor: +2pt): Configuración electrónica de átomos multielectrónicos]
-        Utilizando el Principio de Aufbau y la Regla de Madelung, construye la configuración electrónica de los siguientes átomos:
+    \begin{exercisex}[Velocidades en el Modelo de Electrones Libres]
+        Considera un metal en donde los electrones de conducción son descritos por el modelo de electrones libres. Recordemos que en este modelo, la velocidad promedio de los electrones en la superficie de Fermi está dada por la velocidad de Fermi \(v_{F} = \slashfrac{\hbar k_{F}}{m}\), en donde \(k_{F}\) es el vector de onda de Fermi.
 
-        \begin{enumerate}[threecol]
-            \item Cobre (\ch{Cu}, \(Z = 29\)).
-            \item Arsénico (\ch{As}, \(Z = 33\)).
-            \item Neodimio (\ch{Nd}, \(Z = 60\)).
-            \item Oro (\ch{Au}, \(Z = 79\)).
-            \item Radón (\ch{Rn}, \(Z = 86\)).
-            \item Neptunio (\ch{Np}, \(Z = 93\)).
+        \begin{enumerate}
+            \item (Valor: +1pt) - Usando los resultados obtenidos en clase, demuestra que la \textbf{velocidad de arrastre} de un electrón en presencia de un campo eléctrico \(\vect{E}\) está dada por
+            
+            \begin{equation*}
+                \vect{v}_{a} = -\dfrac{\sigma\vect{E}}{n\e}
+            \end{equation*}
+
+            en donde \(\sigma\) es la conductividad eléctrica. Demuestra también que \(\sigma\) en términos del camino libre medio \(\ell\) está dada por
+
+            \begin{equation*}
+                \sigma = \dfrac{n\e^{2}\ell}{mv_{F}}.
+            \end{equation*}
+
+            \item (Valor: +1pt) - Considera un alambre hecho de cobre:
+                \begin{enumerate}[label = (b.\arabic*)]
+                    \item Calcula el valor de \(v_{a}\) y de \(v_{F}\) suponiendo que la temperatur del alambre es de \qty{300}{\kelvin} y se le aplica un campo eléctrico cuya magnitud es \(E = \qty{1}{\V\per\m}\). Comenta sobre cómo se comparan ambas velocidades.
+                    \item ¿Qué magnitud tendría que tener dicho campo eléctrico para que \(v_{a}\) y \(v_{F}\) fueran iguales? Escribe tu resultado en unidades de \unit{\V\per\m}.
+                    \item Estima el valor del camino libre medio \(\ell\) para el cobre a \qty{300}{\kelvin} y compara este valor con el espaciamiento promedio de los átomos del metal.
+                \end{enumerate}
+
+                Información útil para resolver este problema: el cobre es un metal monovalente, lo que significa que hay un electrón libre por cada átomo ( o sea, cada átomo del metal dona un electrón de conducción). La densidad de átomo del cobre es \(n = \qty{8.45e28}{\atoms\per\m\cubed}\). La conductividad eléctrica del cobre a \qty{300}{\K} es \(\sigma = \qty[per-mode=symbol]{5.9e7}{\per\ohm\per\m}\)
         \end{enumerate}
-
-        Ahora compara tus respuestas con las configuraciones electrónicas reportadas en el libro ``Physics of Atoms and Molecules''  de B.H. Bransden y C.J. Joachain (en la primera edición de este libro véase la Tabla 7.2 de la página 302).
-        ¿Coinciden tus respuestas con las reportadas en el libro? En los casos en los que no coincidan explica cualitativamente porqué.
-
-        \color{black}
-        \begin{solution}
-            Para construir la configuración electrónica de los diferentes átomos a partir del Principio de Aufbau y la Regla de Madelung, recordando que el Principio de Aufbau nos dice que los diferentes orbitales deben llenarse de menor a mayor energía respetando el principio de exclusión de Pauli y además nos dice que los orbitales deben llenarse por completo antes de comenzar a llenar el siguiente orbital. Por otro lado, la Regla de Madelung nos dice que la energía crece con \(n + \ell\); para dos capas con el mismo valor de \(n + \ell\), la capa con menor \(n\) se llena primero.
-
-            Ambas reglas se pueden resumir en el siguiente diagrama:
-
-            \begin{figure}[htb]
-                \centering
-                \includegraphics[scale=0.25]{1.LlenadoOrbitales}
-                \caption{Diagrama de llenado de orbitales (capas).}
-                \label{fig:llenado-de-orbitales}
-            \end{figure}
-
-            Además, es necesario recordar que el máximo número de electrones por orbital es de \(2(2\ell + 1)\), tal que
-
-            \begin{align*}
-                \ell &= 0 \,(\text{orbital s})\, \text{el número máximo de electrones es}\, 2,\\
-                \ell &= 1 \,(\text{orbital p})\, \text{el número máximo de electrones es}\, 6,\\
-                \ell &= 2 \,(\text{orbital d})\, \text{el número máximo de electrones es}\, 10,\\
-                \ell &= 3 \,(\text{orbital f})\, \text{el número máximo de electrones es}\, 14.
-            \end{align*}
-
-            Por lo que, las configuraciones electrónicas de los diferentes átomos son:
-
-            \begin{enumerate}
-                \item Cobre (\ch{Cu}, \(Z = 29\))
-                
-                \begin{equation*}
-                    \writeelconf{2,2+6,2+6+9,2},
-                \end{equation*}
-
-                o bien,
-
-                \begin{equation*}
-                    \ch{[Ar]}\writeelconf{,,++9,2}.
-                \end{equation*}
-
-                Comparando con aquella reportando en el libro,
-
-                \begin{equation*}
-                    \ch{[Ar]}\writeelconf{,,++10,1},
-                \end{equation*}
-
-                \idest las configuraciones no coinciden. De la \cref{fig:first-excites-states-helium} sabemos que el orbital \(3d\) tiene menor energía que el orbital \(4s\), lo cual nos indica que es más susceptible a ser llenado primero.
-
-                \item Arsénico (\ch{As}, \(Z = 33\))
-                
-                La configuración electrónica de este átomo es
-
-                \begin{equation*}
-                    \ch{[Ar]}\writeelconf{,,++10,2+3}.
-                \end{equation*}
-
-                Y comparándola con la del libro podemos confirmar que se llega a la misma configuración.
-
-                \item Neodimio (\ch{Nd}, \(Z = 60\))
-                
-                La configuración electrónica de este átomo es
-
-                \begin{equation*}
-                    \ch{[Ar]}\writeelconf{,,++10,2+6+10+4,2+6,2},
-                \end{equation*}
-
-                o bien,
-
-                \begin{equation*}
-                    \ch{[Xe]}\writeelconf{,,,+++4,,2}.
-                \end{equation*}
-
-                Y notamos que esta configuración es la misma que la reportada en el libro.
-
-                \item Oro (\ch{Au}, \(Z = 79\))
-                
-                La configuración electrónica para el \ch{Au} es
-
-                \begin{equation*}
-                    \ch{[Xe]}\writeelconf{,,,+++14,++9,2}.
-                \end{equation*}
-
-                Y la reportada en el libro es
-
-                \begin{equation*}
-                    \ch{[Xe]}\writeelconf{,,,+++14,++10,1}.
-                \end{equation*}
-
-                Fijándonos nuevamente en la \cref{fig:first-excites-states-helium}, notamos que el orbital que tiene mayor energía el 6s y el orbital con menor energía el 5d, por lo que es más probable que este se llene primero.
-                
-                \item Radón (\ch{Rn}, \(Z = 86\))
-                
-                La configuración electrónica para el \ch{Rn} es
-
-                \begin{equation*}
-                    \ch{[Xe]}\writeelconf{,,,+++14,++10,2+6}.
-                \end{equation*}
-
-                Comparándola con la del libro, notamos que es la misma.
-                
-                \item Neptunio (\ch{Np}, \(Z = 93\))
-                
-                La configuración electrónica para el \ch{Np} es
-
-                \begin{equation*}
-                    \ch{[Xe]}\writeelconf{,,,+++14,++10+5,2+6,2},
-                \end{equation*}
-
-                o bien,
-
-                \begin{equation*}
-                    \ch{[Rn]}\writeelconf{,,,,+++5,,2}.
-                \end{equation*}
-
-                Mientras que la reportada en el libro es
-
-                \begin{equation*}
-                    \ch{[Rn]}\writeelconf{,,,,+++4,++1,2}.
-                \end{equation*}
-
-                Análogamente al caso del \ch{Au} notamos que el orbital con menor energía es el 5f; sin embargo, eso implicaría una transición prohibida, por lo que es más susceptible que el orbital cuya energía es mayor que la del 5f, pero menor que la del 7s, se llene primero, \idest el 6d.
-            \end{enumerate}        
-        \end{solution}
-    \end{exercise}
+    \end{exercisex}
 \end{document}

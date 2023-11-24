@@ -32,7 +32,7 @@
 \usepackage{multicol}
 \usepackage{nicematrix}
 \usepackage[hyperref]{ntheorem}
-\usepackage{pdfpages}
+% \usepackage{pdfpages} % Include PDF files
 \usepackage{phfqit} % Bra-ket notation
 \savesymbol{so}
 % \usepackage{regexpatch}
@@ -61,7 +61,7 @@
 \definecolor{base3}{RGB}{253, 246, 227}%
 \definecolor{pinkwave}{RGB}{255, 0, 128}%
 \definecolor{customBlue}{RGB}{11, 61, 98}%
-% \pagecolor{base3}
+\pagecolor{base3}
 \graphicspath{{img/}}
 \setlength{\parindent}{2em} % Sangría
 \setlength{\parskip}{0.5em} % Espacio entre párrafo
@@ -137,6 +137,38 @@
 }
 \makeatother
 
+% Configuración de ambiente para ejercicios extra
+\theoremstyle{break}
+\theoremheaderfont{\Large\normalfont\bfseries}
+\theorembodyfont{\color{blue}\normalfont}
+\theoremseparator{\bigskip} % Spacing between header and body
+\theorempreskip{1.5em}
+\theorempostskip{\topsep\bigskip}
+\theorempostwork{
+    \color{customBlue} \hrule width \hsize height 2pt \kern 1mm \hrule width \hsize
+    }
+\newtheorem{exercisex}{Extra}
+\counterwithin{equation}{exercisex}
+
+\makeatletter
+\LetLtxMacro\old@exercisex\exercisex
+\renewcommand*{\exercisex}{%
+  \@ifnextchar[{%
+    \exercisex@opt
+  }{%
+    \old@exercisex
+    \exercisex@bookmark{}%
+  }%
+}
+\def\exercisex@opt[#1]{%
+  \old@exercisex[{#1}]%
+  \exercisex@bookmark{: #1}%
+}
+\newcommand*{\exercisex@bookmark}[1]{%
+  \bookmark[dest=\@currentHref]{Extra \theexercisex#1}%
+}
+\makeatother
+
 % Configuración de ambiente para solución
 \theoremstyle{nonumberbreak}
 \theoremheaderfont{\Large\normalfont\bfseries}
@@ -164,7 +196,7 @@
     urlbordercolor={[rgb]{0.8,0,0.8}},%
     runbordercolor={[rgb]{0.8,0,0.8}},%
     menubordercolor={[rgb]{0,0.2,0.6}},% 
-    pdftitle={Tarea 4},%
+    pdftitle={Tarea 5},%
     pdfauthor={López Merino Marcos},%
     pdfsubject={Física Atómica y Materia Condensada},%
     pdfkeywords={Facultad de Ciencias, UNAM, Física Atómica y Materia Condensada},%
@@ -175,6 +207,19 @@
 \setlist[enumerate, 1] {
   label = (\alph*),
 }
+
+% Multicol environment for lists
+\SetEnumitemKey{twocol}{
+itemsep = 1\itemsep,
+parsep = 0.5\parsep,
+before = \raggedcolumns\begin{multicols}{2},
+after = \end{multicols}}
+
+\SetEnumitemKey{threecol}{
+itemsep = 1\itemsep,
+parsep = 0.5\parsep,
+before = \raggedcolumns\begin{multicols}{3},
+after = \end{multicols}}
 
 %%%%%%%%%%%%%%%%%%siunitx configuration%%%%%%%%%%%%%%%%%%
 % Configuración del paquete siunitx
@@ -211,9 +256,9 @@
 %%%%%%%%%%%%%%%%%%Nuevos comandos%%%%%%%%%%%%%%%%%%
 \newcommand*{\group}{8287}
 \newcommand*{\classname}{Física Atómica y Materia Condensada}
-\newcommand*{\homeworknumber}{Tarea 4}
+\newcommand*{\homeworknumber}{Tarea 5}
 \newcommand*{\name}{Marcos López Merino}
-\DTMsavedate{duedate}{2023-11-23}
+\DTMsavedate{duedate}{2023-12-04}
 
 % unit vector i
 \newcommand*{\uveci}{{\bm{\hat{\textnormal{\bfseries\i}}}}}
@@ -266,20 +311,6 @@
 \newcommand*{\crossprod}[2]{#1 \mathbin{\mul} #2\xspace}
 \newcommand*{\basevect}[1]{\uvec{e}_{#1}\xspace}
 
-% Multicol environment for lists
-\SetEnumitemKey{twocol}{
-itemsep = 1\itemsep,
-parsep = 0.5\parsep,
-before = \raggedcolumns\begin{multicols}{2},
-after = \end{multicols}}
-
-\SetEnumitemKey{threecol}{
-itemsep = 1\itemsep,
-parsep = 0.5\parsep,
-before = \raggedcolumns\begin{multicols}{3},
-after = \end{multicols}}
-
-
 % \newcommand*{\change}[1]{\Delta{#1}\xspace}
 
 \NewDocumentCommand{\change}{ s o m }{%
@@ -310,9 +341,9 @@ after = \end{multicols}}
 
 % Custom boxes
 % Main result box for reading mode
-% \newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{base3}{\hspace{1em}#1\hspace{1em}}}
+\newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{base3}{\hspace{1em}#1\hspace{1em}}}
 % Main result box for printing mode
-\newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{white}{\hspace{1em}#1\hspace{1em}}}
+% \newcommand*\resultbox[1]{\setlength\fboxrule{1.5pt}\fcolorbox{pinkwave}{white}{\hspace{1em}#1\hspace{1em}}}
 
 %%%%%%%%%%%%%%%%%%Portada y configuración%%%%%%%%%%%%%%%%%%
 % Configuración de portada
@@ -351,5 +382,6 @@ after = \end{multicols}}
     \subfile{exercises/exercise1.tex}
 
     % Problema 2
+    \setcounter{exercisex}{1}
     \subfileinclude{exercises/exercise2.tex}
 \end{document}
