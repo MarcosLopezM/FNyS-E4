@@ -3,5 +3,82 @@
 \begin{document}
 	\begin{exercise}
 		El \ch{^{210}Po} es un isótopo radiactivo, emisor alfa con la misma actividad que \qty{5}{\g} de \ch{^{226}Ra}, con una vida media de \num{138376} días. En 2006 el ex espía ruso Alexander Litvinenko fue envenenado con este isótopo. Suponiendo que bastó un microgramo para envenenarlo y que siendo un espía su peso estaba alrededor de los \qty{100}{\kg} ¿cuál sería la dosis equivalente absorbida por el ex espía si en cada decaimiento las partículas pueden depositar una energía de alrededor de \qty{4}{\MeV}?
+
+		\begin{solution}
+			Para poder obtener la dosis absorbida, primero debemos conocer la actividad inicial del \ch{^{210}Po}, que es equivalente a la de \qty{5}{\g} de \ch{^{226}Ra}, donde la actividad a \(t = 0\) es
+
+			\begin{align*}
+				\mathcal{A}_{0} &= \lambda N_{0},\\
+				\mathcal{A}_{0} &= \lambda\cdot\left(m\cdot\dfrac{N_{A}}{A}\right).
+			\end{align*}
+
+			Calculamos la constante de decaimiento \(\lambda\),
+
+			\begin{align*}
+				\lambda &= \dfrac{\ln(2)}{\qty{1.2e10}{\s}},\\
+				\Aboxedsec{\lambda &= \qty{5.8e-11}{\per\s}.}
+			\end{align*}
+
+			Por lo que \(\mathcal{A}_{0}\) es
+
+			\begin{align*}
+				\mathcal{A}_{0} &= (\qty{5.8e-11}{\per\s})\left(\qty{5}{\g}\cdot\dfrac{\qty{6.023e23}{\per\mol}}{\qty{226}{\g\per\mol}}\right),\\
+				&= (\qty{5.8e-11}{\per\s})(\qty{1.33e22}{\per\mol}),\\
+				\Aboxedsec{\mathcal{A}_{0} &= \qty{7.72e11}{\becquerel}.}
+			\end{align*}
+
+			Sabemos que \(\qty{1}{\Ci} = \qty{3.7e10}{\becquerel}\), por lo que \(\mathcal{A}_{0}\) en \unit{\mCi} es igual a
+
+			\begin{empheq}[box=\secbox]{equation*}
+				\mathcal{A}_{0} = \qty{20864.86}{\mCi}.
+			\end{empheq}
+
+			Calculamos ahora la razón de exposición, dada por:
+
+			\begin{equation*}
+				\text{razón de exposición} = \dfrac{\Gamma\mathcal{A}}{d^{2}},
+			\end{equation*}
+
+			donde \(\Gamma\) es una constante de razón de exposición, \(\mathcal{A}\) la actividad y \(d\) la distancia a la fuente.
+
+			La constante de razón de exposición para el \ch{^{226}Ra} es
+
+			\begin{equation*}
+				\Gamma = \qty[per-mode=symbol]{8.25}{\R\cm\tothe{2}\per\hour\per\mCi}.
+			\end{equation*}
+
+			Y puesto que el Polonio fue ingerido por el ex espía suponemos que la distancia a la fuente es de \(d = \qty{0.1}{\cm}\). Así,
+
+			\begin{align*}
+				\text{razón de exposición} &= \dfrac{\qty[per-mode=symbol]{8.25}{\R\cm\tothe{2}\per\hour\per\mCi}\cdot\qty{20864.86}{\mCi}}{(\qty{0.1}{\cm})^{2}},\\
+				\Aboxedsec{\text{razón de exposición} &= \qty[per-mode=symbol]{1.72e7}{\R\per\hour}.}
+			\end{align*}
+
+			Recordamos que \(\qty{1}{\R} = \qty{2.58e-4}{\C\per\kg}\) y una exposición a \qty{1}{\R} significa que se forman \num{1.61e15} iones por \unit{\kg}. La energía en cada decaimiento es de aproximadamente \qty{4}{\MeV} o \qty{4e6}{\eV}, por lo que la dosis depositada es de
+
+			\begin{align*}
+				E_{\text{dep}} &= (\qty{4e6}{\eV})\left(\qty{1.61e15}{\ions\per\kg}\right),\\
+				\Aboxedsec{E_{\text{dep}} &= \qty[per-mode=symbol]{1030.4}{\J\per\kg}.} 
+			\end{align*}
+
+			Convertimos el resultado a \unit{\gray} que es una unidad adecuada para medir la dosis de radiación absorbida, cuya relación de conversión es
+
+			\begin{equation*}
+				\qty{1}{\gray} = \qty{1}{\J\per\kg}.
+			\end{equation*}
+
+			Entonces,
+
+			\begin{empheq}[box = \secbox]{equation*}
+				E_{\text{dep}} = \qty{1030.4}{\gray}.
+			\end{empheq}
+
+			Por loq ue la razón de dosis absorbida está dada por la razón de exposición y \(E_{\text{dep}}\),
+
+			\begin{align*}
+				\text{Razón de dosis absorbida} &= (\qty[per-mode=symbol]{1.72e7}{\R\per\hour})\cdot(\qty{1030.4}{\gray}),\\
+				\Aboxedmain{\text{Razón de dosis absorbida} &= \qty[per-mode=symbol]{1.77e10}{\gray\per\hour}.}
+			\end{align*}
+		\end{solution}
 	\end{exercise}
 \end{document}
