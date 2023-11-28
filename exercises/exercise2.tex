@@ -4,5 +4,34 @@
 \begin{document}
     \begin{exercise}
         Si la masa del Sol es de \qty{e29}{\kg}, y su vida total es de \num{e9} años, ¿qué potencia disipa al año?
+
+        \begin{solution}
+            Sabemos que la energía que se libera por en el ciclo \ch{p-p} es de \qty{24.68}{\MeV}, que en \unit{J} es
+
+            \begin{empheq}[box = \secbox]{equation*}
+                E_{\text{pp}} = \qty{3.95e-12}{\J}.
+            \end{empheq}
+
+            Y la cantidad de núcleos se obtiene a partir de
+
+            \begin{align*}
+                N &= (\num{e29}\cdot\qty{1000}{\g})\cdot \dfrac{\qty{6.023e23}{\per\mol}}{\qty{1}{\g\per\mol}},\\
+                \Aboxedsec{N &= \num{6.023e56}.}
+            \end{align*}
+
+            Entonces, la energía liberada es de
+
+            \begin{align*}
+                E &= (\qty{3.95e-12}{\J})(\num{6.023e56}),\\
+                \Aboxedsec{E &= \qty{2.38e45}{\J}.}
+            \end{align*}
+
+            Finalmente, para obtener la potencia disipada por año,
+
+            \begin{align*}
+                P &= \dfrac{\qty{2.38e45}{\J}}{\qty{3.15e16}{\s}},\\
+                \Aboxedmain{P &= \qty{7.5417e7}{\W}.}
+            \end{align*}
+        \end{solution}
     \end{exercise}
 \end{document}
