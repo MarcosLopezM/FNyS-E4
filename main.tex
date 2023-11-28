@@ -136,38 +136,6 @@
 }
 \makeatother
 
-% Configuración de ambiente para ejercicios extra
-\theoremstyle{break}
-\theoremheaderfont{\Large\normalfont\bfseries}
-\theorembodyfont{\color{blue}\normalfont}
-\theoremseparator{\bigskip} % Spacing between header and body
-\theorempreskip{1.5em}
-\theorempostskip{\topsep\bigskip}
-\theorempostwork{
-    \color{customBlue} \hrule width \hsize height 2pt \kern 1mm \hrule width \hsize
-    }
-\newtheorem{exercisex}{Extra}
-\counterwithin{equation}{exercisex}
-
-\makeatletter
-\LetLtxMacro\old@exercisex\exercisex
-\renewcommand*{\exercisex}{%
-  \@ifnextchar[{%
-    \exercisex@opt
-  }{%
-    \old@exercisex
-    \exercisex@bookmark{}%
-  }%
-}
-\def\exercisex@opt[#1]{%
-  \old@exercisex[{#1}]%
-  \exercisex@bookmark{: #1}%
-}
-\newcommand*{\exercisex@bookmark}[1]{%
-  \bookmark[dest=\@currentHref]{Extra \theexercisex#1}%
-}
-\makeatother
-
 % Configuración de ambiente para solución
 \theoremstyle{nonumberbreak}
 \theoremheaderfont{\Large\normalfont\bfseries}
@@ -240,6 +208,7 @@ after = \end{multicols}}
 \DeclareSIUnit\mb{mb} % Millibarn
 \DeclareSIUnit\u{u} % Atomic mass unit
 \DeclareSIUnit\clightsq{\text{\ensuremath{c^{2}}}} % Speed of light squared
+\DeclareSIUnit\desint{\text{desintegraciones}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Geometría del documento
