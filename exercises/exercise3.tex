@@ -2,65 +2,6 @@
 \graphicspath{{img/}}
 \begin{document}
 	\begin{exercise}
-		Maussan te da un pedazo de madera que dice ser proveniente de una nave espacial que llegó en 1325 y se estacionó en el patio de su casa ¿qué actividad debería tener dos gramos de esa madera?
-
-		\begin{solution}
-			Para obtener la actividad de los \qty{2}{\g} de madera después de \(t = 2023 - 1325 = 698 \,\text{años} = \qty{2.201e10}{\s}\); recordamos que la actividad de un material está definida como
-
-			\begin{equation}
-				\mathcal{A} = \mathcal{A}_{0}\e^{-\lambda t},
-				\label{eq:activity_decay}
-			\end{equation}
-
-			con \(\mathcal{A}_{0} (\mathcal{A}(0))\) la actividad inicial y \(\lambda\) la constante de decaimiento dada por
-
-			\begin{equation}
-				\lambda = \dfrac{\ln(2)}{t_{\slashfrac{1}{2}}}.
-				\label{eq:decay_constant}
-			\end{equation}
-
-			Sabemos que la vida media del \ch{^{14}C} es de
-
-			\begin{empheq}[box = \secbox]{align*}
-				t_{\slashfrac{1}{2}} &= 5730\,\text{años},\\
-				t_{\slashfrac{1}{2}} &= \qty{1.8e11}{\s}.
-			\end{empheq}
-
-			Para poder conocer la actividad al tiempo \(t\) es necesario conocer la constante de decaimiento y la actividad inicial, donde esta última se puede obtener de dos maneras: a partir del número de decaimientos de una planta viva o de la razón de \(\slashfrac{\#\ch{^{14}C^{2}}}{\#\ch{^{12}C^{2}}}\), como se puede observar a continuación, respectivamente:
-
-			\begin{align}
-				\mathcal{A}_{0} &= \qty{12}{\desint\per\min\per\g}\cdot m,\nonumber\\
-				\mathcal{A}_{0} &= \qty[per-mode=symbol]{0.2}{\becquerel\per\g}\cdot m,
-				\label{eq:initial_activity_per_desint}
-			\end{align}
-
-			o bien,
-
-			\begin{equation}
-				\mathcal{A}_{0} = \lambda \cdot \left(\dfrac{N_{A}}{A}\cdot m\cdot \dfrac{\#\ch{^{14}C^{6}}}{\#\ch{^{12}C^{6}}}\right),
-				\label{eq:initial_activity_per_ratio}
-			\end{equation}
-
-			con \(N_{A}\) el número de Avogadro, \(m\) la cantidad de material en gramos y \(A\) el número atómico. \cref{eq:initial_activity_per_desint,eq:initial_activity_per_ratio} son equivalente.
-			Ahora podemos calcular \(\mathcal{A}_{0}\) yy \(\lambda\), tal que
-
-			\begin{empheq}[box =\secbox]{align*}
-				\lambda &= \qty{3.85e-12}{\per\s},\\
-				\mathcal{A}_{0} &= \qty{0.4}{\becquerel}\quad\text{de \cref{eq:initial_activity_per_desint}},\\
-				\mathcal{A}_{0} &= \qty{0.5025}{\becquerel}\quad\text{de \cref{eq:initial_activity_per_ratio}}.
-			\end{empheq}
-
-			Por lo que la actividad de \qty{2}{\g} de madera es de 
-
-			\begin{align*}
-				\implies\mathcal{A}(t = \text{698 años}) &= \qty{0.4}{\becquerel}\cdot\e^{-\qty{3.85e-12}{\per\s}\cdot\qty{2.201e10}{\s}},\\
-				\Aboxedmain{\mathcal{A}(t = \text{698 años}) &\simeq \qty{0.3675}{\becquerel}.}
-			\end{align*}
-
-			\begin{align*}
-				\implies\mathcal{A}(t = \text{698 años}) &= \qty{0.5025}{\becquerel}\cdot\e^{-\qty{3.85e-12}{\per\s}\cdot\qty{2.201e10}{\s}},\\
-				\Aboxedmain{\mathcal{A}(t = \text{698 años}) &\simeq \qty{0.4617}{\becquerel}.}
-			\end{align*}
-		\end{solution}
+		¿Qué masa de hidrógeno necesitas para generar \qty[inter-unit-product=]{1}{\MW\D}?
 	\end{exercise}
 \end{document}
