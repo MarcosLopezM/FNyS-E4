@@ -4,5 +4,58 @@
 \begin{document}
     \begin{exercise}
         En el conflicto de Israel-Palestina, Estados Unidos desplegó el portaaviones USS Gerald R. Ford para intimidad a los palestinos. El portaaviones cuenta con dos reactores nucleares A1B que generan \qty{700}{\MW} térmicos con eficiencia de \qty{33}{\percent} cada uno, de Estados Unidos a la costa de Israel recorrió \qty{10853.42}{\km} a una velocidad de \qty{56}{\km\per\hour}, ¿Cuántos \unit{\kg} de \ch{^{235}U} se consumieron? (Considera que el \qty{15}{\percent} de neutrones absorbidos se pierden en captura radiactiva.)
+
+        \begin{solution}
+            Tenemos que la energía que generan los dos reactores es de \qty{700}{\MW}, por lo que la energía generado por cada generador, considerando que su eficiencia es del \qty{33}{\percent}, es 
+
+            \begin{align*}
+                E_{1G} &= 0.33\left(\dfrac{\qty{700}{\MW}}{2}\right),\\
+                \Aboxedsec{E_{1G} &= \qty{115.5}{\MW}}.
+            \end{align*}
+
+            Para determinar la cantidad de combustible consumido calculamos el tiempo que le tomó al portaaviones llegar a Israel,
+
+            \begin{align*}
+                t &= \dfrac{\qty{10853.42}{\km}}{\qty{56}{\km\per\kg}},\\
+                \Aboxedsec{t &= \qty{193.8}{\hour}.}
+            \end{align*}
+
+            Entonces la energía total generada por cada generado es
+
+            \begin{align*}
+                E_{\text{Tot}} &= (\qty{115.5}{\MW})(\qty{193.8}{\hour}),\\
+                \Aboxedsec{E_{\text{Tot}} &= \qty{22385.18}{\MWh}.}
+            \end{align*}
+
+            Veamos ahora cuánta energía se libera por \unit{\kg} de \ch{^{235}U},
+
+            \begin{align*}
+                N &= (\qty{1000}{\g})\cdot\dfrac{\qty[per-mode=power]{6.023e23}{\per\mol}}{\qty{235}{\g\per\mol}},\\
+                \Aboxedsec{N &= \qty{2.56e24}{\per\kg}.}
+            \end{align*}
+
+            Y sabemos que por cada fisión de \ch{^{235}U} se liberan \(\qty{200}{\MeV} = \qty{3.2e-11}{\J}\), por lo tanto
+
+            \begin{align*}
+                E &\approx (\qty{3.2e-11}{\J})\cdot(\qty{2.56e24}{\per\kg}),\\
+                &\approx \qty{820.15e11}{\J},\\
+                \Aboxedsec{E &\approx \qty{22782}{\MWh}.}
+            \end{align*}
+
+            Así, la cantidad de \ch{^{235}U} consumida es
+
+            \begin{align*}
+                m_{\ch{^{235}U}} &= \dfrac{\qty{22385.18}{\MWh}}{\qty{22782}{\MWh}}\cdot \qty{1}{\kg},\\
+                &= \qty{0.982}{\kg},\\
+                \Aboxedsec{m_{\ch{^{235}U}} &\simeq \qty{1}{\kg}.}
+            \end{align*}
+
+            Pero la cantidad consumida por ambos generados es el doble, \idest \qty{2}{\kg}. Sin embargo, aún nos falta considerar la pérdida del \qty{15}{\percent} de neutrones absorbidos por captura radiactiva, tal que
+
+            \begin{align*}
+                m &= 0.85(\qty{2}{\kg}),\\
+                \Aboxedmain{m &= \qty{1.7}{\kg}.}
+            \end{align*}
+        \end{solution}
     \end{exercise}
 \end{document}
