@@ -3,5 +3,52 @@
 \begin{document}
 	\begin{exercise}
 		Se te da una muestra de madera proveniente de una excavación en Tlatelolco, su masa es de \qty{10}{\g} y su actividad es de \qty{2.35}{\becquerel} ¿qué tan antigua es la muestra?
+
+		\begin{solution}
+			Queremos determina la antigüedad de la muestra, por lo que es necesario conocer \(\lambda\) y la actividad inicial \(\mathcal{A}_{0}\); pero primero resolvemos \cref{eq:activity} para \(t\),
+
+			\begin{equation}
+				t = \dfrac{1}{\lambda}\ln\left(\dfrac{\mathcal{A}_{0}}{\mathcal{A}}\right).
+				\label{eq:time_for_activity}
+			\end{equation}
+
+			Sabemos que la actividad inicial para materiales a base de carbono se obtiene a partir de
+
+			\begin{equation*}
+				\mathcal{A}_{0} = \lambda N_{0} = \lambda\left(\dfrac{N_{A}}{A}\mul m \mul \dfrac{\#\ch{^{14}C}}{\#\ch{^{12}C}}\right)
+			\end{equation*}
+
+			con \(N_{A}\) el número de Avogadro, \(m\) la cantidad de muestra y \(\slashfrac{\#\ch{^{14}C}}{\#\ch{^{12}C}} = \num{1.3e-12}\).
+
+			La vida media del \ch{^{14}C} es de
+
+			\begin{empheq}[box=\secbox]{align*}
+				t_{\slashfrac{1}{2}} &= \qty{5730}{\years},\\
+				t_{\slashfrac{1}{2}} &= \qty{1.8e11}{\s}.
+			\end{empheq}
+
+			Tal que el valor de \(\lambda\) es
+
+			\begin{align}
+				\lambda &= \dfrac{\ln(2)}{\qty{1.8e11}{\s}}\nonumber\\
+				\Aboxedsec{\lambda &= \qty[per-mode=power]{3.85e-12}{\per\s}.}\label{eq:disintegration_constant}
+			\end{align}
+
+			Por lo que la actividad inicial de \qty{10}{\g} de madera es de
+
+			\begin{align}
+				\mathcal{A}_{0} &= (\qty[per-mode=power]{3.85e-12}{\per\s})\left(\dfrac{\qty[per-mode=power]{6.023e23}{\per\mol}}{\qty{12}{\g\per\mol}}\mul\qty{10}{\g}\mul\num{1.3e-12}\right),\nonumber\\
+				\Aboxedsec{\mathcal{A}_{0} &\simeq \qty{2.51}{\becquerel}.}\label{eq:initial_activity}
+			\end{align}
+
+			\pagebreak
+			Sustituyendo \cref{eq:disintegration_constant,eq:initial_activity} en \cref{eq:time_for_activity} la antigüedad de la madera es de
+
+			\begin{align*}
+				t &= \dfrac{1}{\qty[per-mode=power]{3.85e-12}{\per\s}}\ln\left(\dfrac{\qty{2.51}{\becquerel}}{\qty{2.35}{\becquerel}}\right),\\
+				&\simeq \qty{1.7e10}{\s},\\
+				\Aboxedmain{t &= \qty{551}{\years}.}
+			\end{align*}
+		\end{solution}
 	\end{exercise}
 \end{document}
