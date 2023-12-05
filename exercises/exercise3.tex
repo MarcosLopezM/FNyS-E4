@@ -2,6 +2,29 @@
 \graphicspath{{img/}}
 \begin{document}
 	\begin{exercise}
-		¿Qué masa de hidrógeno necesitas para generar \qty[inter-unit-product=]{1}{\MW\D}?
+		¿Qué masa de hidrógeno necesitas para generar \qty[inter-unit-product=]{1}{\MWD}?
+
+		\begin{solution}
+			Del ciclo \(p-p\) sabemos que al colisionar dos hidrógenos la energía que se libera es de \(\qty{0.42}{\MeV} \simeq \qty{7.79e-25}{\MWD}\). Partiendo de la expresión para la energía liberada
+
+			\begin{equation}
+				E \simeq (\qty{7.79e-25}{\MWD})N,
+				\label{eq:energy_dissipated}
+			\end{equation}
+
+			con \(N\) la cantidad de núcleos, \idest
+
+			\begin{equation*}
+				N = m \cdot \dfrac{N_{A}}{A}.
+			\end{equation*}
+
+			Sabemos que la energía generada es de \qty{1}{\MWD}, entonces de \cref{eq:energy_dissipated}
+
+			\begin{align*}
+				\qty{1}{\MWD} &\simeq (\qty{7.79e-25}{\MWD})(m \cdot \qty{6.023e23}{\per\g}),\\
+				m &\simeq \dfrac{\qty{1}{\MWD}\cdot\qty{1}{\g}}{(\qty{7.79e-25}{\MWD})(\num{6.023e23})},\\
+				\Aboxedmain{m &\simeq \qty{2.13}{\g}.}
+			\end{align*}
+		\end{solution}
 	\end{exercise}
 \end{document}
