@@ -4,5 +4,33 @@
 \begin{document}
     \begin{exercise}
         Como el tiempo de vida media de \ch{^{235}U} (\qty{7.13e8}{\years}) es menor al tiempo de vida media de \ch{^{238}U} (\qty{4.51e9}{\years}), la abundancia de \ch{^{235}U} ha ido decreciendo en la Tierra. ¿Hace cuánto tiempo la abundancia isotrópica del \ch{^{235}U} era igual a \SI{3}{\percent}? Este porcentaje es el enriquecimiento que se usa en algunas plantas nucleares.
+
+        \begin{solution}
+            La actividad de un material al tiempo \(t\) está definida por
+
+			\begin{equation}
+				\mathcal{A}(t) = \mathcal{A}_{0}\e^{-\lambda t}.
+				\label{eq:activity}
+			\end{equation}
+
+            Sabemos que el \ch{^{238}U} es más abundante que el \ch{^{235}U}, tal que una muestra uranio contiene un \qty{99.28}{\percent} de \ch{^{238}U} y un \qty{0.72}{\percent} de \ch{^{235}U}. Y puesto que queremos determinar cuando la abundancia era del \qty{3}{\percent} para el \ch{^{235}U} y, por ende, la abundancia del \ch{^{238}U} era del \qty{97}{\percent}, su expresión para la actividad es
+
+            \begin{equation*}
+                \mathcal{A}(t) = \dfrac{\num{0.72}}{\num{99.28}} = \dfrac{3}{97}\e^{-(\lambda_{1} - \lambda_{2})t},
+            \end{equation*}
+
+            donde \(\lambda_{1}\) es la constante de desintegración del \ch{^{235}U} y \(\lambda_{2}\) es la constante de desintegración del \ch{^{238}U}. 
+
+            Resolviendo para \(t\) se obtiene que
+
+            \begin{align*}
+                t &= \dfrac{\ln\left(\tfrac{\num{99.28}}{\num{0.72}}\right)}{\ln\left(\tfrac{97}{3}\right)}\dfrac{1}{\lambda_{1} - \lambda_{2}},\\
+                &= \dfrac{\ln\left(\tfrac{\num{99.28}}{\num{0.72}}\right)}{\ln\left(\tfrac{97}{3}\right)}\dfrac{1}{\qty{9.7e-10}{\years} - \qty{1.5e-10}{\years}},\\
+                \Aboxedsec{t &= \qty{1.73e9}{\years}.}
+            \end{align*}
+
+            Por lo que aproximadamente hace \num{1.73} billones de años la abundancia isotrópica del \ch{^{235}U} era del \SI{3}{\percent}.
+
+        \end{solution}
     \end{exercise}
 \end{document}
