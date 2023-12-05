@@ -3,5 +3,37 @@
 \begin{document}
 	\begin{exercise}
 		Si cada fisión del \ch{^{235}U} genera en promedio 2.5 neutrones de energías térmicas (aproxima a \qty{1}{\eV}) ¿qué cantidad de ese combustible es necesario para recibir una dosis alta de (\qty{5}{\sievert}) en una persona de \qty{80}{\kg} de peso (solo proveniente de neutrones)?
+
+		\begin{solution}
+			Sabemos que la dosis absorbida está dad por la energía absorbida por unidad de masa, tal que
+			
+			\begin{equation*}
+				D \simeq \dfrac{E}{m}.
+			\end{equation*}
+
+			Por lo que la energía absorbida es
+
+			\begin{align*}
+				E &\simeq D \cdot m,\\
+				&\simeq (\qty{5}{\sievert})(\qty{80}{\kg}),\\
+				&\simeq (\qty{5}{\J\per\kg})(\qty{80}{\kg}),\\
+				\Aboxedsec{E &\simeq \qty{400}{\J}.}
+			\end{align*}
+
+			Para determinar la cantidad del combustible, o el número de neutrones que se necesitan, debemos determinar la energía que se libera por cada fisión. Para ello, sabemos que la energía liberada por cada fisión es de \qty{1}{\eV} por neutrón, por lo que la energía liberada por cada neutrón es de
+
+			\begin{align*}
+				E_{n} &\simeq \dfrac{\qty{1}{\eV}}{2.5},\\
+				E_{n} &\simeq \qty{6.4e-20}{\J\per\neutron}.
+			\end{align*}
+
+			Entonces, la cantidad de neutrones que se necesitan es
+
+			\begin{align*}
+				N_{n} &\simeq \dfrac{E}{E_{n}},\\
+				&\simeq \dfrac{\qty{400}{\J}}{\qty{6.4e-20}{\J\per\neutron}},\\
+				\Aboxedmain{N_{n} &\simeq \qty{6.25e21}{\neutrons}.}
+			\end{align*}
+		\end{solution}
 	\end{exercise}
 \end{document}
